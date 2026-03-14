@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | KartaFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { KartaCyan: '#00ADB5', KartaPurple: '#9b59b6', DarkBase: '#050505', Surface: '#111216' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-DarkBase text-white font-sans antialiased min-h-screen relative overflow-x-hidden">
+    
+    <nav class="fixed w-full z-50 bg-Surface/70 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-3xl">📍</span>
+                    <span class="font-bold text-2xl tracking-widest uppercase">KartaFlow</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-300">
+                <a href="features.html" class="text-KartaCyan transition">Features</a> <a href="pricing.html" class="hover:text-KartaCyan transition">Pricing</a>
+                <a href="faq.html" class="hover:text-KartaCyan transition">FAQ</a>
+                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-6 py-2.5 rounded shadow-[0_0_15px_rgba(0,173,181,0.5)] transition font-bold">
+                    System Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-24">
+            <h1 class="text-5xl font-black tracking-tight mb-4">System Capabilities</h1>
+            <p class="text-gray-400 text-xl">Everything you need to run a flawless field operation.</p>
+        </div>
+
+        <div class="space-y-32">
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="text-6xl mb-6">🗺️</div>
+                    <h3 class="text-3xl font-bold mb-4">Live Dispatch Mapping</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Visualize your entire fleet on a dark-matter cartographic interface. Quickly identify which engineers are active, driving, or on-site. When an emergency ticket drops, our Haversine-powered distance calculator instantly flags the nearest available unit.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="feature-map.png" alt="Live Map Interface" class="rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,173,181,0.15)] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="text-6xl mb-6">🧠</div>
+                    <h3 class="text-3xl font-bold mb-4">Gemini AI Auto-Find</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Say goodbye to tedious data entry. Type in a client's business name and postcode, and our integrated Gemini AI agent will sweep public records to extract director names, contact numbers, and corporate emails, auto-filling your CRM instantly.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="feature-ai.png" alt="AI Data Extraction UI" class="rounded-xl border border-white/10 shadow-[0_0_30px_rgba(155,89,182,0.15)] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="text-6xl mb-6">⚡</div>
+                    <h3 class="text-3xl font-bold mb-4">Google-Powered Routing</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Input a list of postcodes for the day's installations. KartaFlow taps into the Google Maps API to optimize the route, calculating exact polyline paths, distances, and driving durations to keep your fleet operating at peak efficiency.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="feature-route.png" alt="Route Optimization Logic" class="rounded-xl border border-white/10 shadow-[0_0_30px_rgba(59,130,246,0.15)] w-full object-cover hover:scale-[1.02] transition-transform duration-300">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-DarkBase border-t border-white/10 py-16 mt-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div class="flex flex-col items-center md:items-start gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-3xl">📍</span>
+                    <span class="font-bold text-2xl uppercase tracking-widest">KartaFlow</span>
+                </div>
+                <p class="text-gray-600 text-sm">&copy; 2026 KartaFlow. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Get in Touch</p>
+                <a href="mailto:hello@kartaflow.co.uk" class="text-xl font-medium text-white hover:text-KartaCyan transition">
+                    hello@kartaflow.co.uk
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

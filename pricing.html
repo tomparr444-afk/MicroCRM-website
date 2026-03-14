@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | KartaFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { KartaCyan: '#00ADB5', KartaPurple: '#9b59b6', DarkBase: '#050505', Surface: '#111216' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-DarkBase text-white font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+    
+    <nav class="fixed w-full z-50 bg-Surface/70 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <span class="text-3xl">📍</span>
+                    <span class="font-bold text-2xl tracking-widest uppercase">KartaFlow</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-300">
+                <a href="features.html" class="hover:text-KartaCyan transition">Features</a>
+                <a href="pricing.html" class="text-KartaCyan transition">Pricing</a> <a href="faq.html" class="hover:text-KartaCyan transition">FAQ</a>
+                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-6 py-2.5 rounded shadow-[0_0_15px_rgba(0,173,181,0.5)] transition font-bold">
+                    System Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto relative z-10 flex-grow w-full">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black tracking-tight mb-4">Investment Plans</h1>
+            <p class="text-gray-400 text-xl">Powerful tools for serious operations teams.</p>
+        </div>
+
+        <div class="flex justify-center items-center gap-4 mb-16">
+            <span id="monthly-label" class="text-white font-bold transition">Monthly</span>
+            <button id="billing-toggle" class="w-16 h-8 bg-KartaCyan rounded-full relative transition duration-300 focus:outline-none shadow-[0_0_15px_rgba(0,173,181,0.4)]" onclick="toggleBilling()">
+                <div id="toggle-circle" class="w-6 h-6 bg-DarkBase rounded-full absolute top-1 left-1 transition-transform duration-300"></div>
+            </button>
+            <span id="annual-label" class="text-gray-500 font-bold transition flex items-center gap-2">
+                Annually 
+                <span class="bg-KartaPurple/20 text-KartaPurple text-xs px-2 py-0.5 rounded-full border border-KartaPurple/30">Save 20%</span>
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-Surface border border-white/10 p-8 rounded-xl flex flex-col hover:border-white/30 transition duration-300 hover:shadow-2xl">
+                <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                <p class="text-gray-400 mb-6 min-h-[48px]">Core dispatching for small fleets.</p>
+                <div class="text-5xl font-black mb-8">
+                    <span class="price-display" data-monthly="£79" data-annual="£63">£79</span><span class="text-lg font-normal text-gray-500">/mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-1 text-gray-300">
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan">✔️</span> Up to 5 Engineers</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan">✔️</span> Basic Map Dispatch</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan">✔️</span> Maintenance Ticketing</li>
+                    <li class="flex items-center gap-3 opacity-40"><span class="text-gray-600">❌</span> AI Auto-Find CRM</li>
+                </ul>
+                <button class="w-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/30 text-white py-3 rounded font-bold transition">Select Starter</button>
+            </div>
+
+            <div class="bg-Surface border-2 border-KartaCyan p-8 rounded-xl flex flex-col relative shadow-[0_0_30px_rgba(0,173,181,0.15)] transform md:-translate-y-4 hover:scale-[1.02] transition duration-300">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-KartaCyan text-DarkBase px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-[0_0_15px_rgba(0,173,181,0.5)]">Most Popular</div>
+                <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                <p class="text-gray-400 mb-6 min-h-[48px]">Advanced logistics and AI integration.</p>
+                <div class="text-5xl font-black mb-8 text-KartaCyan">
+                    <span class="price-display text-white" data-monthly="£189" data-annual="£149">£189</span><span class="text-lg font-normal text-gray-500">/mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-1 text-gray-300">
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan drop-shadow-[0_0_5px_rgba(0,173,181,0.5)]">✔️</span> Up to 25 Engineers</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan drop-shadow-[0_0_5px_rgba(0,173,181,0.5)]">✔️</span> Advanced Route Optimization</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan drop-shadow-[0_0_5px_rgba(0,173,181,0.5)]">✔️</span> AI Auto-Find CRM Integration</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaCyan drop-shadow-[0_0_5px_rgba(0,173,181,0.5)]">✔️</span> Installation Tracker</li>
+                </ul>
+                <button class="w-full bg-KartaCyan hover:bg-cyan-400 text-DarkBase py-3 rounded font-bold transition shadow-[0_0_15px_rgba(0,173,181,0.3)]">Start Free Trial</button>
+            </div>
+
+            <div class="bg-Surface border border-white/10 p-8 rounded-xl flex flex-col hover:border-KartaPurple/50 hover:shadow-[0_0_30px_rgba(155,89,182,0.15)] transition duration-300">
+                <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                <p class="text-gray-400 mb-6 min-h-[48px]">Custom architecture for national operations.</p>
+                <div class="text-5xl font-black mb-8">Custom</div>
+                <ul class="space-y-4 mb-10 flex-1 text-gray-300">
+                    <li class="flex items-center gap-3"><span class="text-KartaPurple drop-shadow-[0_0_5px_rgba(155,89,182,0.5)]">✔️</span> Unlimited Engineers</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaPurple drop-shadow-[0_0_5px_rgba(155,89,182,0.5)]">✔️</span> Custom API Integrations</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaPurple drop-shadow-[0_0_5px_rgba(155,89,182,0.5)]">✔️</span> Dedicated Account Manager</li>
+                    <li class="flex items-center gap-3"><span class="text-KartaPurple drop-shadow-[0_0_5px_rgba(155,89,182,0.5)]">✔️</span> White-labeling Options</li>
+                </ul>
+                <button class="w-full bg-white text-black hover:bg-gray-200 py-3 rounded font-bold transition">Contact Sales</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-DarkBase border-t border-white/10 py-16 mt-auto relative z-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div class="flex flex-col items-center md:items-start gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-3xl">📍</span>
+                    <span class="font-bold text-2xl uppercase tracking-widest">KartaFlow</span>
+                </div>
+                <p class="text-gray-600 text-sm">&copy; 2026 KartaFlow. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Get in Touch</p>
+                <a href="mailto:hello@kartaflow.co.uk" class="text-xl font-medium text-white hover:text-KartaCyan transition">
+                    hello@kartaflow.co.uk
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let isAnnual = false;
+        function toggleBilling() {
+            isAnnual = !isAnnual;
+            
+            // UI Toggle Animation
+            const toggleCircle = document.getElementById('toggle-circle');
+            const toggleBg = document.getElementById('billing-toggle');
+            const monthlyLabel = document.getElementById('monthly-label');
+            const annualLabel = document.getElementById('annual-label');
+
+            if (isAnnual) {
+                toggleCircle.classList.add('translate-x-8');
+                toggleBg.classList.replace('bg-KartaCyan', 'bg-KartaPurple');
+                toggleBg.classList.replace('shadow-[0_0_15px_rgba(0,173,181,0.4)]', 'shadow-[0_0_15px_rgba(155,89,182,0.4)]');
+                monthlyLabel.classList.replace('text-white', 'text-gray-500');
+                annualLabel.classList.replace('text-gray-500', 'text-white');
+            } else {
+                toggleCircle.classList.remove('translate-x-8');
+                toggleBg.classList.replace('bg-KartaPurple', 'bg-KartaCyan');
+                toggleBg.classList.replace('shadow-[0_0_15px_rgba(155,89,182,0.4)]', 'shadow-[0_0_15px_rgba(0,173,181,0.4)]');
+                monthlyLabel.classList.replace('text-gray-500', 'text-white');
+                annualLabel.classList.replace('text-white', 'text-gray-500');
+            }
+
+            // Update Prices
+            const prices = document.querySelectorAll('.price-display');
+            prices.forEach(price => {
+                price.textContent = isAnnual ? price.getAttribute('data-annual') : price.getAttribute('data-monthly');
+            });
+        }
+    </script>
+</body>
+</html>

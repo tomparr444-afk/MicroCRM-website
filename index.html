@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KartaFlow | The Operations Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { KartaCyan: '#00ADB5', KartaPurple: '#9b59b6', DarkBase: '#050505', Surface: '#111216' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-DarkBase text-white font-sans antialiased min-h-screen relative overflow-x-hidden">
+    
+    <nav class="fixed w-full z-50 bg-Surface/70 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-3xl">📍</span>
+                <span class="font-bold text-2xl tracking-widest uppercase">KartaFlow</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-300">
+                <a href="features.html" class="hover:text-KartaCyan transition">Features</a>
+                <a href="pricing.html" class="hover:text-KartaCyan transition">Pricing</a>
+                <a href="faq.html" class="hover:text-KartaCyan transition">FAQ</a>
+                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-6 py-2.5 rounded shadow-[0_0_15px_rgba(0,173,181,0.5)] transition font-bold">
+                    System Login
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-48 pb-32 px-6 flex flex-col items-center text-center z-10 bg-DarkBase">
+        <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-KartaCyan/20 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-KartaPurple/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-KartaPurple/50 bg-KartaPurple/10 text-KartaPurple text-sm font-semibold uppercase tracking-wider relative z-10">
+            Next-Gen Field Service Mgt
+        </div>
+        <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-tight relative z-10">
+            Dispatch. <span class="text-transparent bg-clip-text bg-gradient-to-r from-KartaCyan to-blue-500">Optimize.</span> <br> Dominate.
+        </h1>
+        <p class="max-w-2xl mx-auto text-xl text-gray-400 mb-12 font-light relative z-10">
+            KartaFlow is the ultimate command center for your field operations. Live mapping, AI-driven CRM, and smart route optimization—built for scale.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-white hover:bg-gray-200 text-black px-10 py-4 rounded font-bold text-lg transition shadow-xl">
+                Deploy KartaFlow
+            </a>
+            <a href="pricing.html" class="bg-white/5 hover:bg-white/10 border border-white/20 text-white px-10 py-4 rounded font-bold text-lg transition backdrop-blur-sm">
+                View Pricing
+            </a>
+        </div>
+    </section>
+
+    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-40" style="background-image: url('screenshot1.png');">
+        <div class="absolute inset-0 bg-DarkBase/80 backdrop-blur-[2px]"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-KartaCyan font-bold tracking-widest uppercase mb-2">AI-Powered CRM</h2>
+                <h3 class="text-4xl md:text-5xl font-black mb-6">Stop manual data entry.</h3>
+                <p class="text-xl text-gray-300 font-light leading-relaxed">
+                    Just type a business name and postcode. Our integrated AI instantly sweeps public records to fetch directors, contact info, and company details, building your database effortlessly.
+                </p>
+            </div>
+            <div class="md:w-1/2"></div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-Surface border-y border-white/10 relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black">Built for the Field.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-KartaCyan/50 transition">
+                    <div class="text-4xl mb-6">🌍</div>
+                    <h4 class="text-2xl font-bold mb-3">Live Fleet Mapping</h4>
+                    <p class="text-gray-400">Instantly locate your nearest active engineers using real-time Haversine distance tracking.</p>
+                </div>
+                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-KartaPurple/50 transition">
+                    <div class="text-4xl mb-6">🚚</div>
+                    <h4 class="text-2xl font-bold mb-3">Route Optimization</h4>
+                    <p class="text-gray-400">Add multiple stops and let our engine map out the most efficient drive using Google routing logic.</p>
+                </div>
+                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-blue-500/50 transition">
+                    <div class="text-4xl mb-6">📅</div>
+                    <h4 class="text-2xl font-bold mb-3">Visual Scheduling</h4>
+                    <p class="text-gray-400">Seamlessly assign maintenance and installation tickets to your engineers with a weekly visual diary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-48" style="background-image: url('screenshot2.png');">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-KartaCyan font-bold tracking-widest uppercase mb-2">Total Control</h2>
+            <h3 class="text-4xl md:text-6xl font-black mb-8">Your entire operation,<br>visible at a glance.</h3>
+            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="inline-block bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-10 py-4 rounded font-bold text-lg transition shadow-[0_0_20px_rgba(0,173,181,0.4)]">
+                Enter Command Center
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-DarkBase border-t border-white/10 py-16 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div class="flex flex-col items-center md:items-start gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-3xl">📍</span>
+                    <span class="font-bold text-2xl uppercase tracking-widest">KartaFlow</span>
+                </div>
+                <p class="text-gray-600 text-sm">&copy; 2026 KartaFlow. All rights reserved.</p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-2">
+                <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Get in Touch</p>
+                <a href="mailto:hello@kartaflow.co.uk" class="text-xl font-medium text-white hover:text-KartaCyan transition">
+                    hello@kartaflow.co.uk
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
