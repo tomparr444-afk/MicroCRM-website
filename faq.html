@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | KartaFlow</title>
+    <title>FAQ | Micro CRM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { KartaCyan: '#00ADB5', KartaPurple: '#9b59b6', DarkBase: '#050505', Surface: '#111216' }
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { BrandBlue: '#3b82f6', BrandIndigo: '#6366f1', DarkBase: '#0f172a', Surface: '#1e293b', Border: '#334155' }
                 }
             }
         }
     </script>
+    <style>body { background-color: #0f172a; }</style>
 </head>
-<body class="bg-DarkBase text-white font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<body class="text-slate-50 font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden">
     
-    <nav class="fixed w-full z-50 bg-Surface/70 backdrop-blur-md border-b border-white/10">
+    <nav class="fixed w-full z-50 bg-Surface/80 backdrop-blur-md border-b border-Border">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
-                    <span class="text-3xl">📍</span>
-                    <span class="font-bold text-2xl tracking-widest uppercase">KartaFlow</span>
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <span class="text-3xl">💼</span>
+                    <span class="font-bold text-2xl tracking-tight">Micro CRM</span>
                 </a>
             </div>
-            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-300">
-                <a href="features.html" class="hover:text-KartaCyan transition">Features</a>
-                <a href="pricing.html" class="hover:text-KartaCyan transition">Pricing</a>
-                <a href="faq.html" class="text-KartaCyan transition">FAQ</a> <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-6 py-2.5 rounded shadow-[0_0_15px_rgba(0,173,181,0.5)] transition font-bold">
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-slate-300">
+                <a href="features.html" class="hover:text-BrandBlue transition">Features</a>
+                <a href="pricing.html" class="hover:text-BrandBlue transition">Pricing</a>
+                <a href="faq.html" class="text-BrandBlue transition">FAQ</a> 
+                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-BrandBlue hover:bg-blue-400 text-white px-6 py-2.5 rounded-md shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] transition font-semibold">
                     System Login
                 </a>
             </div>
@@ -38,67 +42,67 @@
     <section class="pt-40 pb-20 px-6 max-w-4xl mx-auto relative z-10 flex-grow w-full">
         <div class="text-center mb-16">
             <h1 class="text-5xl font-black tracking-tight mb-4">Intelligence Briefing</h1>
-            <p class="text-gray-400 text-xl">Everything you need to know about the KartaFlow platform.</p>
+            <p class="text-slate-400 text-xl">Everything you need to know about the Micro CRM platform.</p>
         </div>
 
         <div class="space-y-4">
             
-            <details class="group bg-Surface border border-white/10 rounded-xl hover:border-KartaCyan/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-KartaCyan transition list-none">
+            <details class="group bg-Surface border border-Border rounded-xl hover:border-BrandBlue/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-BrandBlue transition list-none">
                     <span>Is the platform mobile friendly?</span>
-                    <span class="transition group-open:rotate-180 text-KartaCyan">
+                    <span class="transition group-open:rotate-180 text-BrandBlue">
                         <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                 </summary>
-                <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4 mt-2">
-                    Absolutely. KartaFlow is built dynamically to re-flow perfectly on mobile devices. Your field engineers can view their weekly diary, update job statuses, and check dispatch routes directly from their phones.
+                <div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-Border pt-4 mt-2">
+                    Absolutely. Micro CRM is built dynamically to re-flow perfectly on mobile devices. Your field engineers can view their weekly diary, update job statuses, and check dispatch routes directly from their phones.
                 </div>
             </details>
 
-            <details class="group bg-Surface border border-white/10 rounded-xl hover:border-KartaCyan/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-KartaCyan transition list-none">
+            <details class="group bg-Surface border border-Border rounded-xl hover:border-BrandBlue/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-BrandBlue transition list-none">
                     <span>Do I need my own API keys?</span>
-                    <span class="transition group-open:rotate-180 text-KartaCyan">
+                    <span class="transition group-open:rotate-180 text-BrandBlue">
                         <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                 </summary>
-                <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4 mt-2">
-                    Yes. To utilize the advanced routing and AI features, you will need to input your own Google Maps API Key and Google Gemini API Key into the system settings.
+                <div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-Border pt-4 mt-2">
+                    No. Micro CRM comes fully integrated with our enterprise API keys for both Google Maps routing and Gemini AI. You can start using all advanced features immediately upon deployment without needing to manage, configure, or pay for your own API developer accounts.
                 </div>
             </details>
 
-            <details class="group bg-Surface border border-white/10 rounded-xl hover:border-KartaCyan/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-KartaCyan transition list-none">
+            <details class="group bg-Surface border border-Border rounded-xl hover:border-BrandBlue/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-BrandBlue transition list-none">
                     <span>Can I bulk upload my existing clients?</span>
-                    <span class="transition group-open:rotate-180 text-KartaCyan">
+                    <span class="transition group-open:rotate-180 text-BrandBlue">
                         <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                 </summary>
-                <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4 mt-2">
-                    Yes! KartaFlow features a robust data upload tool. You can upload <code>.xlsx</code> files containing your current users or jobs, and the system will automatically process and geocode them onto the map.
+                <div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-Border pt-4 mt-2">
+                    Yes! Micro CRM features a robust Batch Ingestion tool. You can upload <code>.xlsx</code> files containing your current users or jobs, and the system will automatically process and geocode them onto the map.
                 </div>
             </details>
 
-            <details class="group bg-Surface border border-white/10 rounded-xl hover:border-KartaCyan/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-KartaCyan transition list-none">
+            <details class="group bg-Surface border border-Border rounded-xl hover:border-BrandBlue/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-BrandBlue transition list-none">
                     <span>Can I customize the map for my team?</span>
-                    <span class="transition group-open:rotate-180 text-KartaCyan">
+                    <span class="transition group-open:rotate-180 text-BrandBlue">
                         <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                 </summary>
-                <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4 mt-2">
-                    Definitely. KartaFlow allows you to assign unique pin colors (like blue, green, red, purple, and orange) to specific engineers or job severities, giving your dispatchers a visual shorthand of the entire operation.
+                <div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-Border pt-4 mt-2">
+                    Definitely. Micro CRM allows you to assign unique pin colors (like blue, green, red, purple, and orange) to specific engineers or job severities, giving your dispatchers a visual shorthand of the entire operation.
                 </div>
             </details>
 
-            <details class="group bg-Surface border border-white/10 rounded-xl hover:border-KartaCyan/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden">
-                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-KartaCyan transition list-none">
+            <details class="group bg-Surface border border-Border rounded-xl hover:border-BrandBlue/50 transition duration-300 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                <summary class="flex items-center justify-between p-6 cursor-pointer text-xl font-bold hover:text-BrandBlue transition list-none">
                     <span>How secure is my operational data?</span>
-                    <span class="transition group-open:rotate-180 text-KartaCyan">
+                    <span class="transition group-open:rotate-180 text-BrandBlue">
                         <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                 </summary>
-                <div class="px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4 mt-2">
+                <div class="px-6 pb-6 text-slate-400 leading-relaxed border-t border-Border pt-4 mt-2">
                     Your data is stored securely using Supabase (PostgreSQL), featuring enterprise-grade row-level security. Your customer lists, fleet data, and ticketing information are safely isolated to your specific Company ID.
                 </div>
             </details>
@@ -106,19 +110,19 @@
         </div>
     </section>
 
-    <footer class="bg-DarkBase border-t border-white/10 py-16 mt-auto relative z-20">
+    <footer class="bg-DarkBase border-t border-Border py-12 mt-auto relative z-20">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-            <div class="flex flex-col items-center md:items-start gap-3">
+            <div class="flex flex-col items-center md:items-start gap-2">
                 <div class="flex items-center gap-2">
-                    <span class="text-3xl">📍</span>
-                    <span class="font-bold text-2xl uppercase tracking-widest">KartaFlow</span>
+                    <span class="text-2xl">💼</span>
+                    <span class="font-bold text-xl tracking-tight">Micro CRM</span>
                 </div>
-                <p class="text-gray-600 text-sm">&copy; 2026 KartaFlow. All rights reserved.</p>
+                <p class="text-slate-500 text-sm mt-1">&copy; 2026 Micro CRM. All rights reserved.</p>
             </div>
-            <div class="flex flex-col items-center md:items-end gap-2">
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Get in Touch</p>
-                <a href="mailto:hello@kartaflow.co.uk" class="text-xl font-medium text-white hover:text-KartaCyan transition">
-                    hello@kartaflow.co.uk
+            <div class="flex flex-col items-center md:items-end gap-1">
+                <p class="text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1">Get in Touch</p>
+                <a href="mailto:hello@microcrm.co.uk" class="text-lg font-medium text-slate-300 hover:text-BrandBlue transition">
+                    hello@microcrm.co.uk
                 </a>
             </div>
         </div>
