@@ -3,31 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KartaFlow | The Operations Command Center</title>
+    <title>Micro CRM | The Lightweight Operations Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { KartaCyan: '#00ADB5', KartaPurple: '#9b59b6', DarkBase: '#050505', Surface: '#111216' }
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: { 
+                        BrandBlue: '#3b82f6', 
+                        BrandIndigo: '#6366f1', 
+                        DarkBase: '#0f172a', 
+                        Surface: '#1e293b',
+                        Border: '#334155'
+                    }
                 }
             }
         }
     </script>
+    <style>
+        body { background-color: #0f172a; }
+    </style>
 </head>
-<body class="bg-DarkBase text-white font-sans antialiased min-h-screen relative overflow-x-hidden">
+<body class="text-slate-50 font-sans antialiased min-h-screen relative overflow-x-hidden">
     
-    <nav class="fixed w-full z-50 bg-Surface/70 backdrop-blur-md border-b border-white/10">
+    <nav class="fixed w-full z-50 bg-Surface/80 backdrop-blur-md border-b border-Border">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="text-3xl">📍</span>
-                <span class="font-bold text-2xl tracking-widest uppercase">KartaFlow</span>
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">💼</span>
+                <span class="font-bold text-2xl tracking-tight">Micro CRM</span>
             </div>
-            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-300">
-                <a href="features.html" class="hover:text-KartaCyan transition">Features</a>
-                <a href="pricing.html" class="hover:text-KartaCyan transition">Pricing</a>
-                <a href="faq.html" class="hover:text-KartaCyan transition">FAQ</a>
-                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-6 py-2.5 rounded shadow-[0_0_15px_rgba(0,173,181,0.5)] transition font-bold">
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-slate-300">
+                <a href="features.html" class="hover:text-BrandBlue transition">Features</a>
+                <a href="pricing.html" class="hover:text-BrandBlue transition">Pricing</a>
+                <a href="faq.html" class="hover:text-BrandBlue transition">FAQ</a>
+                <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-BrandBlue hover:bg-blue-400 text-white px-6 py-2.5 rounded-md shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] transition font-semibold">
                     System Login
                 </a>
             </div>
@@ -35,94 +48,98 @@
     </nav>
 
     <section class="relative pt-48 pb-32 px-6 flex flex-col items-center text-center z-10 bg-DarkBase">
-        <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-KartaCyan/20 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-KartaPurple/20 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-BrandBlue/20 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-BrandIndigo/20 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-KartaPurple/50 bg-KartaPurple/10 text-KartaPurple text-sm font-semibold uppercase tracking-wider relative z-10">
-            Next-Gen Field Service Mgt
+        <div class="inline-block mb-6 px-4 py-1.5 rounded-full border border-BrandBlue/30 bg-BrandBlue/10 text-blue-400 text-sm font-semibold tracking-wide relative z-10">
+            Lightweight CRM. Heavyweight Operations.
         </div>
-        <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-tight relative z-10">
-            Dispatch. <span class="text-transparent bg-clip-text bg-gradient-to-r from-KartaCyan to-blue-500">Optimize.</span> <br> Dominate.
+        <h1 class="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-tight relative z-10">
+            Dispatch. <span class="text-transparent bg-clip-text bg-gradient-to-r from-BrandBlue to-indigo-400">Route.</span> <br> Resolve.
         </h1>
-        <p class="max-w-2xl mx-auto text-xl text-gray-400 mb-12 font-light relative z-10">
-            KartaFlow is the ultimate command center for your field operations. Live mapping, AI-driven CRM, and smart route optimization—built for scale.
+        <p class="max-w-2xl mx-auto text-xl text-slate-400 mb-12 font-normal relative z-10">
+            Micro CRM is the ultimate command center for your field operations. Live mapping, Gemini AI-driven client enrichment, and Google-powered route optimization—all in one fast, clutter-free dashboard.
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-white hover:bg-gray-200 text-black px-10 py-4 rounded font-bold text-lg transition shadow-xl">
-                Deploy KartaFlow
+        <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="bg-BrandBlue hover:bg-blue-500 text-white px-10 py-4 rounded-md font-semibold text-lg transition shadow-[0_4px_14px_0_rgba(59,130,246,0.39)]">
+                Deploy Micro CRM
             </a>
-            <a href="pricing.html" class="bg-white/5 hover:bg-white/10 border border-white/20 text-white px-10 py-4 rounded font-bold text-lg transition backdrop-blur-sm">
+            <a href="pricing.html" class="bg-Surface hover:bg-Border border border-Border text-white px-10 py-4 rounded-md font-semibold text-lg transition backdrop-blur-sm">
                 View Pricing
             </a>
         </div>
     </section>
 
-    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-40" style="background-image: url('screenshot1.png');">
-        <div class="absolute inset-0 bg-DarkBase/80 backdrop-blur-[2px]"></div>
+    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-40 border-y border-Border" style="background-image: url('screenshot1.png');">
+        <div class="absolute inset-0 bg-DarkBase/85 backdrop-blur-[3px]"></div>
         
         <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
-                <h2 class="text-KartaCyan font-bold tracking-widest uppercase mb-2">AI-Powered CRM</h2>
-                <h3 class="text-4xl md:text-5xl font-black mb-6">Stop manual data entry.</h3>
-                <p class="text-xl text-gray-300 font-light leading-relaxed">
-                    Just type a business name and postcode. Our integrated AI instantly sweeps public records to fetch directors, contact info, and company details, building your database effortlessly.
+                <div class="inline-flex items-center gap-2 text-BrandBlue font-bold tracking-wider uppercase mb-4 text-sm">
+                    <span>🤖</span> Integrated Gemini AI
+                </div>
+                <h3 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Stop manual data entry.</h3>
+                <p class="text-xl text-slate-300 font-normal leading-relaxed">
+                    Just type a business name and postcode. Our integrated AI agent instantly sweeps public records to fetch directors, contact info, and company registration details, building your database in seconds.
                 </p>
             </div>
-            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2">
+                </div>
         </div>
     </section>
 
-    <section class="py-32 bg-Surface border-y border-white/10 relative z-20">
+    <section class="py-32 bg-Surface relative z-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-4xl font-black">Built for the Field.</h2>
+                <h2 class="text-4xl font-black tracking-tight">Built for the Field.</h2>
+                <p class="text-slate-400 mt-4 text-lg">Everything you need, without the enterprise bloat.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-KartaCyan/50 transition">
-                    <div class="text-4xl mb-6">🌍</div>
-                    <h4 class="text-2xl font-bold mb-3">Live Fleet Mapping</h4>
-                    <p class="text-gray-400">Instantly locate your nearest active engineers using real-time Haversine distance tracking.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-xl bg-DarkBase border border-Border hover:border-BrandBlue/50 transition duration-300 shadow-sm">
+                    <div class="text-4xl mb-6">🗺️</div>
+                    <h4 class="text-xl font-bold mb-3">Live Fleet Mapping</h4>
+                    <p class="text-slate-400 leading-relaxed">Instantly locate your nearest active engineers using real-time Haversine distance tracking and status-coded map pins.</p>
                 </div>
-                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-KartaPurple/50 transition">
+                <div class="p-8 rounded-xl bg-DarkBase border border-Border hover:border-BrandIndigo/50 transition duration-300 shadow-sm">
                     <div class="text-4xl mb-6">🚚</div>
-                    <h4 class="text-2xl font-bold mb-3">Route Optimization</h4>
-                    <p class="text-gray-400">Add multiple stops and let our engine map out the most efficient drive using Google routing logic.</p>
+                    <h4 class="text-xl font-bold mb-3">Google-Powered Routing</h4>
+                    <p class="text-slate-400 leading-relaxed">Add multiple installation stops and let our engine map out the most efficient drive using live Google routing logic.</p>
                 </div>
-                <div class="p-8 rounded-xl bg-DarkBase border border-white/5 hover:border-blue-500/50 transition">
-                    <div class="text-4xl mb-6">📅</div>
-                    <h4 class="text-2xl font-bold mb-3">Visual Scheduling</h4>
-                    <p class="text-gray-400">Seamlessly assign maintenance and installation tickets to your engineers with a weekly visual diary.</p>
+                <div class="p-8 rounded-xl bg-DarkBase border border-Border hover:border-emerald-500/50 transition duration-300 shadow-sm">
+                    <div class="text-4xl mb-6">🛠️</div>
+                    <h4 class="text-xl font-bold mb-3">Dual Pipelines</h4>
+                    <p class="text-slate-400 leading-relaxed">Seamlessly manage and assign separate workflows for quick Maintenance fixes and multi-stage Installation projects.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-48" style="background-image: url('screenshot2.png');">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <section class="relative bg-fixed bg-center bg-cover bg-no-repeat py-48 border-t border-Border" style="background-image: url('screenshot2.png');">
+        <div class="absolute inset-0 bg-DarkBase/75 backdrop-blur-sm"></div>
         
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-KartaCyan font-bold tracking-widest uppercase mb-2">Total Control</h2>
-            <h3 class="text-4xl md:text-6xl font-black mb-8">Your entire operation,<br>visible at a glance.</h3>
-            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="inline-block bg-KartaCyan hover:bg-cyan-400 text-DarkBase px-10 py-4 rounded font-bold text-lg transition shadow-[0_0_20px_rgba(0,173,181,0.4)]">
+            <h2 class="text-BrandBlue font-bold tracking-wider uppercase mb-4 text-sm">Total Control</h2>
+            <h3 class="text-4xl md:text-6xl font-black mb-8 tracking-tight">Your entire operation,<br>visible at a glance.</h3>
+            <a href="YOUR_STREAMLIT_APP_URL_HERE" class="inline-block bg-white hover:bg-slate-200 text-slate-900 px-10 py-4 rounded-md font-bold text-lg transition shadow-xl">
                 Enter Command Center
             </a>
         </div>
     </section>
 
-    <footer class="bg-DarkBase border-t border-white/10 py-16 relative z-20">
+    <footer class="bg-DarkBase border-t border-Border py-12 relative z-20">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-            <div class="flex flex-col items-center md:items-start gap-3">
+            <div class="flex flex-col items-center md:items-start gap-2">
                 <div class="flex items-center gap-2">
-                    <span class="text-3xl">📍</span>
-                    <span class="font-bold text-2xl uppercase tracking-widest">KartaFlow</span>
+                    <span class="text-2xl">💼</span>
+                    <span class="font-bold text-xl tracking-tight">Micro CRM</span>
                 </div>
-                <p class="text-gray-600 text-sm">&copy; 2026 KartaFlow. All rights reserved.</p>
+                <p class="text-slate-500 text-sm mt-1">&copy; 2026 Micro CRM. All rights reserved.</p>
             </div>
             
-            <div class="flex flex-col items-center md:items-end gap-2">
-                <p class="text-gray-500 text-xs uppercase tracking-widest font-bold">Get in Touch</p>
-                <a href="mailto:hello@kartaflow.co.uk" class="text-xl font-medium text-white hover:text-KartaCyan transition">
-                    hello@kartaflow.co.uk
+            <div class="flex flex-col items-center md:items-end gap-1">
+                <p class="text-slate-500 text-xs uppercase tracking-wider font-semibold mb-1">Get in Touch</p>
+                <a href="mailto:hello@microcrm.co.uk" class="text-lg font-medium text-slate-300 hover:text-BrandBlue transition">
+                    hello@microcrm.co.uk
                 </a>
             </div>
         </div>
