@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micro CRM | The Lightweight Operations Command Center</title>
+    <link rel="icon" type="image/jpeg" href="MClogoSmall.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <script>
@@ -31,10 +32,11 @@
 <body class="text-slate-50 font-sans antialiased min-h-screen relative overflow-x-hidden">
     
     <nav class="fixed w-full z-50 bg-Surface/80 backdrop-blur-md border-b border-Border">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <span class="text-3xl">💼</span>
-                <span class="font-bold text-2xl tracking-tight">Micro CRM</span>
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="hover:opacity-80 transition block">
+                    <img src="MClogobig.png" alt="Micro CRM Logo" class="h-24 md:h-32 w-auto object-contain transform scale-125 origin-left">
+                </a>
             </div>
             <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-slate-300">
                 <a href="features.html" class="hover:text-BrandBlue transition">Features</a>
@@ -47,7 +49,7 @@
         </div>
     </nav>
 
-    <section class="relative pt-48 pb-32 px-6 flex flex-col items-center text-center z-10 bg-DarkBase">
+    <section class="relative pt-56 pb-32 px-6 flex flex-col items-center text-center z-10 bg-DarkBase">
         <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-BrandBlue/20 blur-[120px] rounded-full pointer-events-none"></div>
         <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-BrandIndigo/20 blur-[120px] rounded-full pointer-events-none"></div>
 
@@ -128,12 +130,11 @@
 
     <footer class="bg-DarkBase border-t border-Border py-12 relative z-20">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">💼</span>
-                    <span class="font-bold text-xl tracking-tight">Micro CRM</span>
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center">
+                    <img src="MClogobig.png" alt="Micro CRM Logo" class="h-16 md:h-24 w-auto opacity-90 object-contain transform scale-125 origin-left">
                 </div>
-                <p class="text-slate-500 text-sm mt-1">&copy; 2026 Micro CRM. All rights reserved.</p>
+                <p class="text-slate-500 text-sm mt-4">&copy; 2026 Micro CRM. All rights reserved.</p>
             </div>
             
             <div class="flex flex-col items-center md:items-end gap-1">
