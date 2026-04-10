@@ -20,7 +20,7 @@
         }
     </script>
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
@@ -29,86 +29,108 @@
 
     <nav class="fixed w-full z-50 bg-DarkBase/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-16 md:h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl">💼</span>
-                <span class="font-black text-xl tracking-tighter">Micro<span class="text-BrandBlue">CRM</span></span>
+            
+            <div class="flex items-center gap-3">
+                <img src="Micro CRM Logo.png" alt="Micro CRM Logo" class="h-8 md:h-10 object-contain" onerror="this.style.display='none'">
+                <span class="font-black text-xl md:text-2xl tracking-tighter">Micro<span class="text-BrandBlue">CRM</span></span>
             </div>
             
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400 items-center">
                 <a href="/features" class="hover:text-white transition">Features</a>
                 <a href="/pricing" class="hover:text-white transition">Pricing</a>
                 <a href="/faq" class="hover:text-white transition">FAQ</a>
-                <a href="/app" class="glass-card px-5 py-2 rounded-full text-white hover:bg-white/10 transition">Login</a>
+                <a href="/app" class="glass-card px-6 py-2.5 rounded-full text-white font-bold hover:bg-white/10 transition shadow-[0_0_15px_rgba(59,130,246,0.3)] border-BrandBlue/50">
+                    System Login
+                </a>
             </div>
 
-            <button onclick="toggleMenu()" class="md:hidden text-slate-300">
-                <i class="fa-solid fa-bars-staggered text-xl"></i>
+            <button onclick="toggleMenu()" class="md:hidden text-slate-300 p-2 focus:outline-none">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-Surface border-b border-Border p-6 flex flex-col gap-6 text-center animate-in slide-in-from-top">
-            <a href="/features" class="text-lg text-slate-300">Features</a>
-            <a href="/pricing" class="text-lg text-slate-300">Pricing</a>
-            <a href="/faq" class="text-lg text-slate-300">FAQ</a>
-            <a href="/app" class="bg-BrandBlue py-4 rounded-xl font-bold">System Login</a>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-Surface border-b border-Border p-6 flex flex-col gap-5 text-center shadow-2xl">
+            <a href="/features" class="text-lg font-medium text-slate-300 py-2 border-b border-white/5">Features</a>
+            <a href="/pricing" class="text-lg font-medium text-slate-300 py-2 border-b border-white/5">Pricing</a>
+            <a href="/faq" class="text-lg font-medium text-slate-300 py-2 border-b border-white/5">FAQ</a>
+            <a href="/app" class="bg-BrandBlue text-white py-4 rounded-xl font-bold mt-2 shadow-lg shadow-BrandBlue/20">System Login</a>
         </div>
     </nav>
 
-    <header class="relative pt-40 pb-20 md:pt-60 md:pb-40 px-6 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-BrandBlue/20 blur-[120px] rounded-full -z-10"></div>
+    <header class="relative pt-32 pb-16 md:pt-52 md:pb-32 px-6 overflow-hidden">
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-3xl h-96 bg-BrandBlue/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
         
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-4 py-1.5 mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-full bg-BrandBlue/10 text-BrandBlue border border-BrandBlue/20">
-                Lightweight CRM. Heavyweight Ops.
+        <div class="max-w-4xl mx-auto text-center mt-8 md:mt-0">
+            <div class="inline-block px-4 py-1.5 mb-6 md:mb-8 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-full bg-BrandBlue/10 text-BrandBlue border border-BrandBlue/20">
+                Lightweight CRM. Heavyweight Operations.
             </div>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tight mb-8 leading-[1.1]">
+            
+            <h1 class="text-5xl md:text-8xl font-black tracking-tight mb-6 md:mb-8 leading-[1.1]">
                 Dispatch. <span class="gradient-text">Route.</span> <br> Resolve.
             </h1>
-            <p class="text-base md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                The ultimate field operations command center. Live mapping, AI client enrichment, and Google route optimization—all in one dashboard.
+            
+            <p class="text-base md:text-xl text-slate-400 mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
+                Your entire field operation, visible at a glance. Manage workforce schedules, instantly map live engineering routes, and enrich client profiles using deep Gemini AI integration. 
             </p>
             
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/app" class="bg-BrandBlue hover:bg-blue-400 text-white px-10 py-5 rounded-2xl font-bold text-lg transition shadow-xl shadow-BrandBlue/20 w-full sm:w-auto">
-                    Enter Command Center <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+                <a href="/app" class="bg-BrandBlue hover:bg-blue-400 text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold text-lg transition shadow-xl shadow-BrandBlue/20 w-full sm:w-auto flex items-center justify-center">
+                    Enter Command Center <i class="fa-solid fa-arrow-right ml-3 text-sm"></i>
                 </a>
-                <a href="/pricing" class="glass-card px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition w-full sm:w-auto">
+                <a href="/pricing" class="glass-card px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold text-lg hover:bg-white/5 transition w-full sm:w-auto">
                     View Pricing
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass-card p-10 rounded-[2.5rem] hover:border-BrandBlue/50 transition duration-500">
-            <div class="w-14 h-14 bg-BrandBlue/10 rounded-2xl flex items-center justify-center mb-8 text-BrandBlue text-2xl">
-                <i class="fa-solid fa-map-location-dot"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4">Fleet Mapping</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Real-time Haversine distance tracking with status-coded engineer pins.</p>
+    <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Built for the Field.</h2>
+            <p class="text-slate-400 text-lg">Everything you need, without the enterprise bloat.</p>
         </div>
-        <div class="glass-card p-10 rounded-[2.5rem] hover:border-BrandIndigo/50 transition duration-500">
-            <div class="w-14 h-14 bg-BrandIndigo/10 rounded-2xl flex items-center justify-center mb-8 text-BrandIndigo text-2xl">
-                <i class="fa-solid fa-robot"></i>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-8 rounded-[2rem] hover:border-BrandBlue/50 transition duration-500 group">
+                <div class="w-12 h-12 bg-BrandBlue/10 rounded-xl flex items-center justify-center mb-6 text-BrandBlue text-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Live Fleet Mapping</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">Real-time Haversine distance tracking. Instantly locate your nearest active engineers with status-coded map pins.</p>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Gemini AI</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Instant company enrichment. Type a name, our AI builds the client profile.</p>
-        </div>
-        <div class="glass-card p-10 rounded-[2.5rem] hover:border-emerald-500/50 transition duration-500">
-            <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-emerald-400 text-2xl">
-                <i class="fa-solid fa-route"></i>
+            
+            <div class="glass-card p-8 rounded-[2rem] hover:border-BrandIndigo/50 transition duration-500 group">
+                <div class="w-12 h-12 bg-BrandIndigo/10 rounded-xl flex items-center justify-center mb-6 text-BrandIndigo text-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Gemini AI Enrichment</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">Stop manual data entry. Type a business name, and our AI instantly sweeps public records to build your client database.</p>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Google Routes</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Advanced multi-stop optimization using live Google routing logic.</p>
+            
+            <div class="glass-card p-8 rounded-[2rem] hover:border-emerald-500/50 transition duration-500 group">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 text-emerald-400 text-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Google-Powered Routing</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">Add multiple installation stops and let our engine map out the most efficient drive using live Google routing logic.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-[2rem] hover:border-purple-500/50 transition duration-500 group">
+                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-400 text-xl group-hover:scale-110 transition">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Dual Pipelines</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">Seamlessly manage and assign separate workflows for quick Maintenance fixes and multi-stage Installation projects.</p>
+            </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-white/5 text-center">
-        <div class="text-slate-500 text-sm mb-6">&copy; 2026 Micro CRM Global</div>
+    <footer class="mt-10 py-12 border-t border-white/5 text-center bg-DarkBase relative z-10">
+        <div class="text-slate-500 text-sm mb-6">&copy; 2026 Micro CRM Global. All rights reserved.</div>
         <div class="flex justify-center space-x-8 text-slate-400">
-            <a href="#" class="hover:text-BrandBlue transition"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="hover:text-BrandBlue transition"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:hello@microcrm.co.uk" class="hover:text-BrandBlue transition"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="hover:text-BrandBlue transition text-lg"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="hover:text-BrandBlue transition text-lg"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:hello@microcrm.co.uk" class="hover:text-BrandBlue transition text-lg"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
 
